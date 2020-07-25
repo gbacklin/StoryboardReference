@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Laundry View Controller-->
+        <scene sceneID="psE-0B-x1E">
+            <objects>
+                <viewController storyboardIdentifier="LaundryViewController" id="UXs-OS-pj2" customClass="LaundryViewController" customModule="StoryboardReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ug2-Xl-NaT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHS-qO-msS">
+                                <rect key="frame" x="20" y="428.5" width="374" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpV-Rh-RbK">
+                                <rect key="frame" x="82" y="803" width="250" height="59"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="pcz-Pd-2fM" kind="show" identifier="ShowLocation" id="dbo-aB-5DO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IpV-Rh-RbK" firstAttribute="leading" secondItem="ORO-2M-Z60" secondAttribute="leading" constant="82" id="1KO-L5-12d"/>
+                            <constraint firstItem="lHS-qO-msS" firstAttribute="centerY" secondItem="Ug2-Xl-NaT" secondAttribute="centerY" id="51L-ft-Cqq"/>
+                            <constraint firstItem="ORO-2M-Z60" firstAttribute="trailing" secondItem="IpV-Rh-RbK" secondAttribute="trailing" constant="82" id="Ksk-aP-y62"/>
+                            <constraint firstItem="lHS-qO-msS" firstAttribute="leading" secondItem="ORO-2M-Z60" secondAttribute="leading" constant="20" id="QnY-Fe-l2d"/>
+                            <constraint firstItem="IpV-Rh-RbK" firstAttribute="bottom" secondItem="ORO-2M-Z60" secondAttribute="bottom" id="kda-m1-zdt"/>
+                            <constraint firstItem="ORO-2M-Z60" firstAttribute="trailing" secondItem="lHS-qO-msS" secondAttribute="trailing" constant="20" id="oax-7m-XSl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ORO-2M-Z60"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sVh-CG-h8J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDV-WF-qNW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768.1159420289857" y="120.53571428571428"/>
+        </scene>
+        <!--LocationViewController-->
+        <scene sceneID="jMA-y7-aBU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LocationViewController" storyboardName="Main" referencedIdentifier="LocationViewController" id="pcz-Pd-2fM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4X-l8-TVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479.7101449275365" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>

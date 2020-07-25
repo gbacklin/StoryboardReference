@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment View Controller-->
+        <scene sceneID="VfI-FK-Kh3">
+            <objects>
+                <viewController storyboardIdentifier="PaymentViewController" id="qMp-R8-9ht" customClass="PaymentViewController" customModule="StoryboardReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tap-rK-Bab">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK5-Og-c8f">
+                                <rect key="frame" x="20" y="428.5" width="374" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzq-32-J1k">
+                                <rect key="frame" x="82" y="803" width="250" height="59"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="5pK-aZ-Knw" kind="show" identifier="ShowPaymentProcessed" id="TDn-nE-dGF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tEL-LV-IDj" firstAttribute="trailing" secondItem="pK5-Og-c8f" secondAttribute="trailing" constant="20" id="Zoy-9c-3hF"/>
+                            <constraint firstItem="pK5-Og-c8f" firstAttribute="centerY" secondItem="tap-rK-Bab" secondAttribute="centerY" id="Zwg-qp-DPP"/>
+                            <constraint firstItem="tEL-LV-IDj" firstAttribute="trailing" secondItem="Rzq-32-J1k" secondAttribute="trailing" constant="82" id="bz2-lA-3Jn"/>
+                            <constraint firstItem="Rzq-32-J1k" firstAttribute="leading" secondItem="tEL-LV-IDj" secondAttribute="leading" constant="82" id="qxQ-Nw-2Mi"/>
+                            <constraint firstItem="pK5-Og-c8f" firstAttribute="leading" secondItem="tEL-LV-IDj" secondAttribute="leading" constant="20" id="tLW-b9-rCD"/>
+                            <constraint firstItem="Rzq-32-J1k" firstAttribute="bottom" secondItem="tEL-LV-IDj" secondAttribute="bottom" id="vrf-vs-7aH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tEL-LV-IDj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZXn-cv-nz4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFR-ZE-w2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3176.811594202899" y="120.53571428571428"/>
+        </scene>
+        <!--Payment Processed View Controller-->
+        <scene sceneID="EpX-DK-smF">
+            <objects>
+                <viewController storyboardIdentifier="PaymentProcessedViewController" id="5pK-aZ-Knw" customClass="PaymentProcessedViewController" customModule="StoryboardReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D2a-Ed-Xc0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Processed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWm-jq-ujE">
+                                <rect key="frame" x="20" y="401.5" width="374" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iH-mg-pfr">
+                                <rect key="frame" x="82" y="749" width="250" height="59"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="processPayment:" destination="5pK-aZ-Knw" eventType="touchUpInside" id="0Gh-n6-N1h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LmB-AA-os4" firstAttribute="trailing" secondItem="uWm-jq-ujE" secondAttribute="trailing" constant="20" id="3xi-uR-Cy8"/>
+                            <constraint firstItem="uWm-jq-ujE" firstAttribute="leading" secondItem="LmB-AA-os4" secondAttribute="leading" constant="20" id="Aw3-ba-Qo2"/>
+                            <constraint firstItem="uWm-jq-ujE" firstAttribute="centerY" secondItem="D2a-Ed-Xc0" secondAttribute="centerY" id="Wuu-Mi-gWZ"/>
+                            <constraint firstItem="4iH-mg-pfr" firstAttribute="bottom" secondItem="LmB-AA-os4" secondAttribute="bottom" id="eUP-hj-Jdg"/>
+                            <constraint firstItem="LmB-AA-os4" firstAttribute="trailing" secondItem="4iH-mg-pfr" secondAttribute="trailing" constant="82" id="njD-Jv-72u"/>
+                            <constraint firstItem="4iH-mg-pfr" firstAttribute="leading" secondItem="LmB-AA-os4" secondAttribute="leading" constant="82" id="rg8-Ni-l72"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LmB-AA-os4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h1N-iR-3tZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="35W-bD-gJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3918.8405797101454" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>

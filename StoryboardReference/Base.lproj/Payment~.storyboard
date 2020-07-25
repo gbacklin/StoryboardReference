@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jof-Hr-N6i">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="StoryboardReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yl-tm-zxH">
+                                <rect key="frame" x="20" y="429" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogR-M3-uCY">
+                                <rect key="frame" x="82" y="803" width="250" height="59"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="SzL-az-SmW" kind="show" identifier="ShowLaundry" id="3ai-I0-Qza"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ogR-M3-uCY" secondAttribute="trailing" constant="82" id="37E-qr-zJi"/>
+                            <constraint firstItem="ogR-M3-uCY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3FJ-1b-JPg"/>
+                            <constraint firstItem="2yl-tm-zxH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GzW-AU-rhT"/>
+                            <constraint firstItem="2yl-tm-zxH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IWA-64-9Cz"/>
+                            <constraint firstItem="ogR-M3-uCY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="bib-O1-x8n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2yl-tm-zxH" secondAttribute="trailing" constant="20" id="mN1-Qb-ZNP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vF4-gz-bcH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="VfI-FK-Kh3">
+            <objects>
+                <viewController storyboardIdentifier="PaymentViewController" id="qMp-R8-9ht" customClass="PaymentViewController" customModule="StoryboardReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tap-rK-Bab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK5-Og-c8f">
+                                <rect key="frame" x="20" y="428.5" width="374" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzq-32-J1k">
+                                <rect key="frame" x="82" y="803" width="250" height="59"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="5pK-aZ-Knw" kind="show" identifier="ShowPaymentProcessed" id="TDn-nE-dGF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tEL-LV-IDj" firstAttribute="trailing" secondItem="pK5-Og-c8f" secondAttribute="trailing" constant="20" id="Zoy-9c-3hF"/>
+                            <constraint firstItem="pK5-Og-c8f" firstAttribute="centerY" secondItem="tap-rK-Bab" secondAttribute="centerY" id="Zwg-qp-DPP"/>
+                            <constraint firstItem="tEL-LV-IDj" firstAttribute="trailing" secondItem="Rzq-32-J1k" secondAttribute="trailing" constant="82" id="bz2-lA-3Jn"/>
+                            <constraint firstItem="Rzq-32-J1k" firstAttribute="leading" secondItem="tEL-LV-IDj" secondAttribute="leading" constant="82" id="qxQ-Nw-2Mi"/>
+                            <constraint firstItem="pK5-Og-c8f" firstAttribute="leading" secondItem="tEL-LV-IDj" secondAttribute="leading" constant="20" id="tLW-b9-rCD"/>
+                            <constraint firstItem="Rzq-32-J1k" firstAttribute="bottom" secondItem="tEL-LV-IDj" secondAttribute="bottom" id="vrf-vs-7aH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tEL-LV-IDj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZXn-cv-nz4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFR-ZE-w2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3176.811594202899" y="120.53571428571428"/>
+        </scene>
+        <!--Payment Processed View Controller-->
+        <scene sceneID="EpX-DK-smF">
+            <objects>
+                <viewController storyboardIdentifier="PaymentProcessedViewController" id="5pK-aZ-Knw" customClass="PaymentProcessedViewController" customModule="StoryboardReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D2a-Ed-Xc0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Processed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWm-jq-ujE">
+                                <rect key="frame" x="20" y="401.5" width="374" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iH-mg-pfr">
+                                <rect key="frame" x="82" y="749" width="250" height="59"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="processPayment:" destination="5pK-aZ-Knw" eventType="touchUpInside" id="0Gh-n6-N1h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LmB-AA-os4" firstAttribute="trailing" secondItem="uWm-jq-ujE" secondAttribute="trailing" constant="20" id="3xi-uR-Cy8"/>
+                            <constraint firstItem="uWm-jq-ujE" firstAttribute="leading" secondItem="LmB-AA-os4" secondAttribute="leading" constant="20" id="Aw3-ba-Qo2"/>
+                            <constraint firstItem="uWm-jq-ujE" firstAttribute="centerY" secondItem="D2a-Ed-Xc0" secondAttribute="centerY" id="Wuu-Mi-gWZ"/>
+                            <constraint firstItem="4iH-mg-pfr" firstAttribute="bottom" secondItem="LmB-AA-os4" secondAttribute="bottom" id="eUP-hj-Jdg"/>
+                            <constraint firstItem="LmB-AA-os4" firstAttribute="trailing" secondItem="4iH-mg-pfr" secondAttribute="trailing" constant="82" id="njD-Jv-72u"/>
+                            <constraint firstItem="4iH-mg-pfr" firstAttribute="leading" secondItem="LmB-AA-os4" secondAttribute="leading" constant="82" id="rg8-Ni-l72"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LmB-AA-os4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h1N-iR-3tZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="35W-bD-gJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3918.8405797101454" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d0U-gH-3lk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jof-Hr-N6i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h3O-Q8-2Mg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e0R-Sm-QMF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4b-mv-Pad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+        <!--LaundryViewController-->
+        <scene sceneID="uxp-if-fxx">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LaundryViewController" storyboardName="Laundry" referencedIdentifier="LaundryViewController" id="SzL-az-SmW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IJ0-P6-FbO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awy-6X-o5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768.1159420289857" y="120.53571428571428"/>
+        </scene>
+        <!--LocationViewController-->
+        <scene sceneID="zxO-5p-etU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LocationViewController" storyboardName="Location" referencedIdentifier="LocationViewController" id="fHv-0o-G5F" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wD4-cE-jyw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479.7101449275365" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>
